@@ -1,0 +1,11 @@
+CREATE TABLE product( product_id INT PRIMARY KEY,
+product_name varchar(50), product_price int, pro_com int)
+
+INSERT INTO product(product_id, product_name, product_price, 
+pro_com) VALUES (119, 'Mouse', 350, 96)
+SELECT * FROM product WHERE product_price 
+BETWEEN 200 AND 600
+
+SELECT AVG(product_price) FROM  product WHERE pro_com = 16
+-- write a SQL query to display the pro_name as 'Item Name' and pro_priceas 'Price in Rs.'
+SELECT product_name as 'Item Name', product_price as 'Price in Rs' FROM product
