@@ -9,3 +9,6 @@ BETWEEN 200 AND 600
 SELECT AVG(product_price) FROM  product WHERE pro_com = 16
 -- write a SQL query to display the pro_name as 'Item Name' and pro_priceas 'Price in Rs.'
 SELECT product_name as 'Item Name', product_price as 'Price in Rs' FROM product
+
+--  write a SQL query to find the items whose prices are higher than or equal to $250. Order the result by product price in descending, then product name in ascending. Return pro_name and pro_price.
+SELECT product_name, product_price FROM product WHERE product_price>=250 ORDER BY product_price DESC, product_name ASC
