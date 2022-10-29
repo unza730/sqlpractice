@@ -1,0 +1,26 @@
+SQL Exercises, Practice, Solution - Using Boolean and Relational operators
+-- ///////////////////////////////////////////////////////////////////
+-- **********************************************************************
+-- //////////////////////////////////////////////////////////////////////
+-- Create Table
+CREATE TABLE customer(customer_id INT PRIMARY KEY, cust_name varchar(50), 
+city varchar(50), grade int, salesman_id int)
+-- ///////////////////////////////////////////////////////////////////
+-- **********************************************************************
+-- //////////////////////////////////////////////////////////////////////
+-- Insert Data into Table
+INSERT INTO customer (customer_id, cust_name, city, grade, salesman_id)
+VALUES (3009, 'Geoff Cameron', 'Berlin', 100 , 500)
+-- ///////////////////////////////////////////////////////////////////
+-- **********************************************************************
+-- //////////////////////////////////////////////////////////////////////
+-- Query
+-- write a SQL query to find customers who are either from the city 'New York'
+--  or who do not have a grade greater than 100. 
+-- Return customer_id, cust_name, city, grade, and salesman_id. 
+SELECT * FROM customer WHERE city='NewYyork' OR NOT grade>100
+-- write a SQL query to identify customers who do not belong to the city of 'New York' or have a grade value that exceeds 100.
+--  Return customer_id, cust_name, city, grade, and salesman_id. 
+SELECT * 
+FROM customer 
+WHERE NOT (city = 'New York' OR grade>100);
