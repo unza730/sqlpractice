@@ -118,3 +118,46 @@ customer_id	count		max
 3008		1		250.45
 3003		1		75.29
 
+-- ----------------------------------------------------------------------------------
+-- ---------------------------------------------------------------------
+
+
+SQL Exercise: Purchase amount and commission for the last order
+SQL Formatting Output: Exercise-10 with Solution
+From the following table, write a SQL query to calculate the summation of purchase amount, total commission (15% for all salespeople) by each order date. Sort the result-set on order date. Return order date, summation of purchase amount and commission.
+
+Sample table: orders
+ord_no      purch_amt   ord_date    customer_id  salesman_id
+----------  ----------  ----------  -----------  -----------
+70001       150.5       2012-10-05  3005         5002
+70009       270.65      2012-09-10  3001         5005
+70002       65.26       2012-10-05  3002         5001
+70004       110.5       2012-08-17  3009         5003
+70007       948.5       2012-09-10  3005         5002
+70005       2400.6      2012-07-27  3007         5001
+70008       5760        2012-09-10  3002         5001
+70010       1983.43     2012-10-10  3004         5006
+70003       2480.4      2012-10-10  3009         5003
+70012       250.45      2012-06-27  3008         5002
+70011       75.29       2012-08-17  3003         5007
+70013       3045.6      2012-04-25  3002         5001
+
+Sample Solution:
+
+SELECT ord_date, SUM(purch_amt), 
+SUM(purch_amt)*.15 
+FROM orders 
+GROUP BY ord_date 
+ORDER BY ord_date;
+Output of the Query:
+
+ord_date	sum		?column?
+2012-04-25	3045.60		456.8400
+2012-06-27	250.45		37.5675
+2012-07-27	2400.60		360.0900
+2012-08-17	185.79		27.8685
+2012-09-10	6979.15		1046.8725
+2012-10-05	215.76		32.3640
+2012-10-10	4463.83		669.5745
+
+
