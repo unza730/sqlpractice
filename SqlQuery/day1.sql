@@ -31,3 +31,13 @@ VALUES(6, 'Ionic 5', 'Hyundai', 'Green', 2021)
 
 -- Select all data from cars database
 SELECT * FROM Cars
+
+-- ---  output
+Car Id ||   Model     || Brand ||  make
+-------     ------
+1	   ||   model S	   || Tesla	Blue	||2018
+2	   ||   EQS	       || Mercedes-Benz	Black	||2022
+3	   ||   iX	       || BMW	Red	2022
+4	   ||   Ionic 5	   || Hyundai	White	||2021
+5	   ||   models	   ||  Tesla	Silver	||   2018
+6	   ||   Ionic 5	   ||  Hyundai	Green	||   2021
