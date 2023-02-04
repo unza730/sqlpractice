@@ -41,3 +41,19 @@ Car Id ||   Model     || Brand ||  make
 4	   ||   Ionic 5	   || Hyundai	White	||2021
 5	   ||   models	   ||  Tesla	Silver	||   2018
 6	   ||   Ionic 5	   ||  Hyundai	Green	||   2021
+
+---- Scenario 1: Data duplicated based on SOME of the columns
+
+
+--- Write a query to Delete duplicate data from cars table.
+--- Duplicate record is identified based on the model and brand name
+
+select model, brand, count(*)
+from Cars
+group by model, brand
+having count(*) > 1;
+-- ------Output 
+model	|| brand	|| (No column name)
+------     ------     ------
+Ionic 5	|| Hyundai	|| 3
+model S	|| Tesla	|| 2
