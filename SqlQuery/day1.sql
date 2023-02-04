@@ -57,3 +57,28 @@ model	|| brand	|| (No column name)
 ------     ------     ------
 Ionic 5	|| Hyundai	|| 3
 model S	|| Tesla	|| 2
+
+
+--->>>> SOLUTION 1: Delete using Unique Identifier.
+select model, brand, count(*)
+from Cars
+group by model, brand;
+------------------------------------
+select model, brand, count(*)
+from Cars
+group by model, brand
+having count(*) > 1;
+-----------------------------------
+select model, brand, max(carId)
+from Cars
+group by model, brand
+having count(*) > 1;
+-------------------------------
+delete from cars
+where carId in(
+          select max(carId)
+         from Cars
+        group by model, brand
+        having count(*) > 1
+		);
+            
