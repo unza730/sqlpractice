@@ -28,3 +28,6 @@ VALUES(5, 'models', 'Tesla', 'Silver', 2018)
 
 INSERT INTO Cars(carId, model, brand, color, make) 
 VALUES(6, 'Ionic 5', 'Hyundai', 'Green', 2021)
+
+-- Select all data from cars database
+SELECT * FROM Cars
