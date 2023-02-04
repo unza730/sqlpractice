@@ -9,3 +9,22 @@ brand varchar(50),
 color varchar(50),
 make INT
 )
+
+-- ----Insert data into table
+INSERT INTO Cars(carId, model, brand, color, make) 
+VALUES(1, 'model S', 'Tesla', 'Blue', 2018)
+
+INSERT INTO Cars(carId, model, brand, color, make) 
+VALUES(2, 'EQS', 'Mercedes-Benz', 'Black', 2022)
+
+INSERT INTO Cars(carId, model, brand, color, make) 
+VALUES(3, 'iX', 'BMW', 'Red', 2022)
+
+INSERT INTO Cars(carId, model, brand, color, make) 
+VALUES(4, 'Ionic 5', 'Hyundai', 'White', 2021)
+
+INSERT INTO Cars(carId, model, brand, color, make) 
+VALUES(5, 'models', 'Tesla', 'Silver', 2018)
+
+INSERT INTO Cars(carId, model, brand, color, make) 
+VALUES(6, 'Ionic 5', 'Hyundai', 'Green', 2021)
